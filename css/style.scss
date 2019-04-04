@@ -1,0 +1,14 @@
+$primaryColor: #ec7705;
+
+
+a {
+  color: $primaryColor;
+}
+
+@mixin verticalGradient($fromColor, $toColor) {
+  background-image: linear-gradient(to bottom, $fromColor, $toColor);
+}
+
+.btn-b {
+  @include verticalGradient(lighten($primaryColor, 30%), white);
+}
